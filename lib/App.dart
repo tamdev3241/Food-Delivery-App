@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'routes/route_controller.dart';
+import 'routes/route_names.dart';
+import 'styles/theme.dart';
+
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
 
@@ -10,6 +14,12 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      title: 'Food delivery App',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.buildTheme,
+      onGenerateRoute: RouteController().pageRoute,
+      initialRoute: RouteNames.initial,
+    );
   }
 }
