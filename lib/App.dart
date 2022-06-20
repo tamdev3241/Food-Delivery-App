@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/src/routes/route_controller.dart';
+import 'package:food_delivery_app/styles/theme.dart';
 
-import 'routes/route_controller.dart';
-import 'routes/route_names.dart';
-import 'styles/theme.dart';
+import 'src/routes/route_names.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
