@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/common_button.dart';
 import '../../constants/app_assets.dart';
 import '../../constants/app_strings.dart';
 import '../../routes/route_names.dart';
+import '../../widgets/common_button.dart';
 import 'widgets/on_boarding_pager.dart';
 
 class OnBoardingScreen extends StatefulWidget {
