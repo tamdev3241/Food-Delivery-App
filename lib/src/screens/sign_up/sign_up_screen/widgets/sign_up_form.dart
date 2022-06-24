@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/app_assets.dart';
-import '../../../constants/app_colors.dart';
-import '../../../constants/app_strings.dart';
-import '../../../helpers/string_helper.dart';
-import '../../../routes/route_names.dart';
-import '../../../styles/custome_style.dart';
-import '../../../utils/validators.dart';
-import '../../../widgets/common_button.dart';
-import 'sign_up_form_field.dart';
+import '../../../../constants/app_assets.dart';
+import '../../../../constants/app_colors.dart';
+import '../../../../constants/app_strings.dart';
+import '../../../../helpers/string_helper.dart';
+import '../../../../routes/route_names.dart';
+import '../../../../styles/custome_style.dart';
+import '../../../../utils/validators.dart';
+import '../../../../widgets/common_button.dart';
+import '../../../../widgets/common_text_field.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({
@@ -34,30 +34,30 @@ class _SignUpFormState extends State<SignUpForm> {
 
   String? onValidateUserName(String? userName) {
     if (StringHelper.isNullOrEmpty(userName)) {
-      return AppStrings.userNameRequired;
+      return AuthenticaStrings.userNameRequired;
     }
     if (!Validators.isValidUserName(userName!)) {
-      return AppStrings.userNameValid;
+      return AuthenticaStrings.userNameValid;
     }
     return null;
   }
 
   String? onValidateEmail(String? email) {
     if (StringHelper.isNullOrEmpty(email)) {
-      return AppStrings.emailRequired;
+      return AuthenticaStrings.emailRequired;
     }
     if (!Validators.isValidEmaill(email!)) {
-      return AppStrings.emailValid;
+      return AuthenticaStrings.emailValid;
     }
     return null;
   }
 
   String? onValidatePassword(String? password) {
     if (StringHelper.isNullOrEmpty(password)) {
-      return AppStrings.passwordRequired;
+      return AuthenticaStrings.passwordRequired;
     }
     if (!Validators.isValidPassword(password!)) {
-      return AppStrings.passwordValid;
+      return AuthenticaStrings.passwordValid;
     }
     return null;
   }
@@ -82,9 +82,9 @@ class _SignUpFormState extends State<SignUpForm> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              SignUpFormField(
+              CommonTextField(
                 controller: userNameController,
-                hindText: AppStrings.userNameHintText,
+                hindText: AuthenticaStrings.userNameHintText,
                 icon: Image.asset(
                   AppAssets.profileIcon,
                   height: 50.0,
@@ -93,9 +93,9 @@ class _SignUpFormState extends State<SignUpForm> {
                 validate: (userName) => onValidateUserName(userName),
               ),
               const SizedBox(height: 13.0),
-              SignUpFormField(
+              CommonTextField(
                 controller: emailController,
-                hindText: AppStrings.emailHintText,
+                hindText: AuthenticaStrings.emailHintText,
                 icon: Image.asset(
                   AppAssets.emailIcon,
                   height: 50.0,
@@ -104,9 +104,9 @@ class _SignUpFormState extends State<SignUpForm> {
                 validate: (email) => onValidateEmail(email),
               ),
               const SizedBox(height: 13.0),
-              SignUpFormField(
+              CommonTextField(
                 controller: passWordController,
-                hindText: AppStrings.passHintText,
+                hindText: AuthenticaStrings.passHintText,
                 icon: Image.asset(
                   AppAssets.lockIcon,
                   height: 50.0,
@@ -129,7 +129,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   ),
                   const SizedBox(width: 5.0),
                   Text(
-                    AppStrings.keepSignIn,
+                    AuthenticaStrings.keepSignIn,
                     style: CustomeStyle.thinStyle.copyWith(
                       fontSize: 15.0,
                     ),
@@ -138,7 +138,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
               const SizedBox(height: 70.0),
               CommonButton(
-                title: AppStrings.createAccount,
+                title: AuthenticaStrings.createAccount,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 30.0,
                   vertical: 20.0,
@@ -150,7 +150,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 child: TextButton(
                   onPressed: () {},
                   child: const Text(
-                    AppStrings.hasAnAccount,
+                    AuthenticaStrings.hasAnAccount,
                     style: TextStyle(
                       color: AppColors.darkGreen,
                       decoration: TextDecoration.underline,

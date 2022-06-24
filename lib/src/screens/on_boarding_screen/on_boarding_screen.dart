@@ -42,13 +42,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               children: const [
                 OnBoardingPager(
                   assetsImagePath: AppAssets.onBoarding1,
-                  title: AppStrings.onBoardingTitle1,
-                  subtitle: AppStrings.onBoardingSubTitle1,
+                  title: OnBoardingStrings.onBoardingTitle1,
+                  subtitle: OnBoardingStrings.onBoardingSubTitle1,
                 ),
                 OnBoardingPager(
                   assetsImagePath: AppAssets.onBoarding2,
-                  title: AppStrings.onBoardingTitle2,
-                  subtitle: AppStrings.onBoardingSubTitle2,
+                  title: OnBoardingStrings.onBoardingTitle2,
+                  subtitle: OnBoardingStrings.onBoardingSubTitle2,
                 ),
               ],
             ),

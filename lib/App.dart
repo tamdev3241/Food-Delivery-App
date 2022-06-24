@@ -18,8 +18,8 @@ class _AppState extends State<App> {
       title: 'Food delivery App',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.buildTheme,
-      onGenerateRoute: RouteController().pageRoute,
       initialRoute: RouteNames.initial,
+      onGenerateRoute: RouteController().pageRoute,
     );
   }
 }

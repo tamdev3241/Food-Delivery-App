@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 
+import '../screens/home/home_screen.dart';
 import '../screens/not_found_screen.dart';
 import '../screens/on_boarding_screen/on_boarding_screen.dart';
-import '../screens/sign_up_proccess_screen.dart';
-import '../screens/sign_up_screen/sign_up_screen.dart';
+import '../screens/sign_up/sign_up_process_screendart/sign_up_proccess_screen.dart';
+import '../screens/sign_up/sign_up_screen/sign_up_screen.dart';
 import '../screens/splash_screen.dart';
 import 'route_names.dart';
 
@@ -19,6 +20,8 @@ class RouteController {
           return const SignUpScreen();
         case RouteNames.signUpProcess:
           return const SignUpProccessScreen();
+        case RouteNames.home:
+          return const HomeScreen();
         default:
           return const NotFoundScreen();
       }

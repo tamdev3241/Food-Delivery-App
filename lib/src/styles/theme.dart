@@ -21,8 +21,20 @@ class AppTheme {
       centerTitle: true,
     ),
     textTheme: const TextTheme(
+      headline5: TextStyle(
+        fontSize: 28,
+        fontWeight: FontWeight.w900,
+        color: Colors.black,
+        fontFamily: 'Roboto-Bold',
+      ),
       headline6: TextStyle(
         fontSize: 22,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+        fontFamily: 'Roboto-Bold',
+      ),
+      bodyText1: TextStyle(
+        fontSize: 18,
         fontWeight: FontWeight.w700,
         color: Colors.black,
         fontFamily: 'Roboto-Bold',
