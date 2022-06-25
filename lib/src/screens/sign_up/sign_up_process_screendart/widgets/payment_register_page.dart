@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/src/constants/app_colors.dart';
 
 import '../../../../constants/app_assets.dart';
 import '../../../../constants/app_strings.dart';
-import 'payment_option.dart';
+import 'payment_option_item.dart';
 
-class PaymentRegisterPage extends StatelessWidget {
+class PaymentRegisterPage extends StatefulWidget {
   const PaymentRegisterPage({Key? key}) : super(key: key);
+
+  @override
+  State<PaymentRegisterPage> createState() => _PaymentRegisterPageState();
+}
+
+class _PaymentRegisterPageState extends State<PaymentRegisterPage> {
+  int chooseIndex = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +34,20 @@ class PaymentRegisterPage extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        PaymentOption(
+        SignUpInfoOptionItem(
           paymentOptionIcon: Image.asset(AppAssets.paypal),
+          borderColor: chooseIndex == 0 ? AppColors.darkGreen : null,
+          onTapped: () => setState(() => chooseIndex = 0),
         ),
-        PaymentOption(
+        SignUpInfoOptionItem(
           paymentOptionIcon: Image.asset(AppAssets.visa),
+          borderColor: chooseIndex == 1 ? AppColors.darkGreen : null,
+          onTapped: () => setState(() => chooseIndex = 1),
         ),
-        PaymentOption(
+        SignUpInfoOptionItem(
           paymentOptionIcon: Image.asset(AppAssets.payoneer),
+          borderColor: chooseIndex == 2 ? AppColors.darkGreen : null,
+          onTapped: () => setState(() => chooseIndex = 2),
         )
       ],
     );

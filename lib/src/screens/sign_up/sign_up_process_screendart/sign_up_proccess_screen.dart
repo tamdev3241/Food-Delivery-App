@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/src/screens/sign_up/sign_up_process_screendart/widgets/set_location_page.dart';
 
 import '../../../constants/app_assets.dart';
 import '../../../constants/app_colors.dart';
@@ -19,6 +20,7 @@ class SignUpProccessScreen extends StatelessWidget {
       UserBioPage(),
       PaymentRegisterPage(),
       UpdatePhotoProfilePage(),
+      SetLocationPage(),
     ];
     return Scaffold(
       body: Container(
@@ -64,7 +66,7 @@ class SignUpProccessScreen extends StatelessWidget {
                       ),
                     ),
                     CommonButton(
-                      title: AppStrings.nextButton,
+                      title: ButtonStrings.next,
                       onPressed: () {
                         if (pageController.page!.toInt() < pages.length - 1) {
                           pageController.nextPage(
@@ -75,7 +77,7 @@ class SignUpProccessScreen extends StatelessWidget {
                             pages.length - 1) {
                           Navigator.pushReplacementNamed(
                             context,
-                            RouteNames.home,
+                            RouteNames.signUpSuccess,
                           );
                         }
                       },

@@ -5,13 +5,17 @@ import '../styles/custome_style.dart';
 
 class CommonButton extends StatelessWidget {
   final String title;
+  final TextStyle? titleStyle;
   final EdgeInsetsGeometry? padding;
+  final Color? color;
   final Function()? onPressed;
   const CommonButton({
     Key? key,
     required this.title,
+    this.titleStyle,
     required this.onPressed,
     this.padding,
+    this.color,
   }) : super(key: key);
 
   @override
@@ -26,11 +30,13 @@ class CommonButton extends StatelessWidget {
             ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),
-          gradient: AppColors.greenGradianColor,
+          gradient: color != null ? null : AppColors.greenGradianColor,
+          color: color,
         ),
         child: Text(
           title,
-          style: CustomeStyle.commonButtonTextStyle,
+          style: titleStyle ?? CustomeStyle.commonButtonTextStyle,
+          textAlign: TextAlign.center,
         ),
       ),
     );

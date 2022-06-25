@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-class PaymentOption extends StatelessWidget {
+class SignUpInfoOptionItem extends StatelessWidget {
   final Widget? paymentOptionIcon;
   final Function()? onTapped;
-  const PaymentOption({
+  final Color? borderColor;
+  const SignUpInfoOptionItem({
     Key? key,
     required this.paymentOptionIcon,
     this.onTapped,
+    this.borderColor,
   }) : super(key: key);
 
   @override
@@ -20,6 +22,9 @@ class PaymentOption extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20.0),
+          border: Border.all(
+            color: borderColor ?? Colors.transparent,
+          ),
           boxShadow: const [
             BoxShadow(
               color: Color.fromARGB(255, 230, 237, 250),

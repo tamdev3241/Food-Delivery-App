@@ -4,4 +4,5 @@ class RouteNames {
   static const String signUp = '/SignUp';
   static const String signUpProcess = '/SignUpProcess';
   static const String home = '/Home';
+  static const String signUpSuccess = '/sign_up_success';
 }

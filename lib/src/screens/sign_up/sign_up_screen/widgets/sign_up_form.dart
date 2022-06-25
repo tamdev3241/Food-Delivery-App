@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/src/constants/contants.dart';
 
 import '../../../../constants/app_assets.dart';
 import '../../../../constants/app_colors.dart';
@@ -65,7 +66,7 @@ class _SignUpFormState extends State<SignUpForm> {
   void onSignUp() {
     FocusScope.of(context).unfocus();
     if (formKey.currentState!.validate() && isKeepSignIn) {
-      Future.delayed(const Duration(milliseconds: 500)).whenComplete(
+      Future.delayed(AppContants.defaultMoveDuration).whenComplete(
         () => Navigator.of(context).pushNamed(RouteNames.signUpProcess),
       );
     }

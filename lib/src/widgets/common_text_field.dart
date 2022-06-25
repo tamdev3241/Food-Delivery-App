@@ -65,7 +65,7 @@ class _CommonTextFieldState extends State<CommonTextField> {
                         isShowPass = !isShowPass;
                       })),
                   child: Icon(
-                    isShowPass ? Icons.visibility : Icons.visibility_off,
+                    isShowPass ? Icons.visibility_off : Icons.visibility,
                     color: Colors.black,
                   ),
                 )

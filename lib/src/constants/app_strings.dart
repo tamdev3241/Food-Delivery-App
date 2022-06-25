@@ -1,5 +1,6 @@
-class AppStrings {
-  static const String nextButton = 'Next';
+class ButtonStrings {
+  static const String next = 'Next';
+  static const String tryOrder = 'Try Order';
 }
 
 class OnBoardingStrings {
@@ -35,14 +36,18 @@ class SignInProcessStrings {
   static const String firstPageTitle = 'Fill in your bio to get \nstarted';
   static const String secondPageTitle = 'Payment Method';
   static const String thirdPageTitle = 'Update Your Photo \nProfile';
+  static const String fourPageTitle = 'Set Your Location';
 
   static const String pageSubTitle =
       'This data will be displayed in your account\nprofile for security';
 
   static const String firstNameHintText = 'First name';
-  static const String lastNameHintText = 'First name';
-  static const String phoneHintText = 'First name';
+  static const String lastNameHintText = 'Last name';
+  static const String phoneHintText = 'Phone';
 
   static const String galleryOption = 'From Gallery';
   static const String cameraOption = 'Take Photo';
+
+  static const String congrats = 'Congrats!';
+  static const String signUpSuccessMgs = 'Your Profile Is Ready To Use';
 }

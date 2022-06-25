@@ -12,4 +12,7 @@ class AppAssets {
   static const String paypal = 'assets/images/paypal_payment.png';
   static const String galerry = 'assets/images/gallery.png';
   static const String camera = 'assets/images/camera.png';
+  static const String avatar = 'assets/images/avatar.png';
+  static const String pin = 'assets/images/pin_logo.png';
+  static const String success = 'assets/images/success_message.png';
 }

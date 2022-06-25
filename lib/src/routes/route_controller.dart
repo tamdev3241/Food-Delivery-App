@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:food_delivery_app/src/screens/sign_up/sign_up_process_screendart/sign_up_success_screen.dart';
 
 import '../screens/home/home_screen.dart';
 import '../screens/not_found_screen.dart';
@@ -20,6 +21,8 @@ class RouteController {
           return const SignUpScreen();
         case RouteNames.signUpProcess:
           return const SignUpProccessScreen();
+        case RouteNames.signUpSuccess:
+          return const SignUpSuccessScreen();
         case RouteNames.home:
           return const HomeScreen();
         default:
