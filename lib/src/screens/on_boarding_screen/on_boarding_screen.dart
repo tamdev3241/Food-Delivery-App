@@ -54,7 +54,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             ),
           ),
           CommonButton(
-            title: AppStrings.nextButton,
+            title: ButtonTitles.next,
             onPressed: onPageChange,
           ),
         ],

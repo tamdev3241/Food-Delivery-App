@@ -1,5 +1,8 @@
-class AppStrings {
-  static const String nextButton = 'Next';
+class ButtonTitles {
+  static const String next = 'Next';
+  static const String signUp = 'Create Account';
+  static const String setLocation = 'Set Location';
+  static const String tryOrder = 'Try Order';
 }
 
 class OnBoardingStrings {
@@ -12,37 +15,49 @@ class OnBoardingStrings {
       'Enjoy a fast and smooth food delivery at\nyour doorstep';
 }
 
-class AuthenticaStrings {
-  static const String signUpTitle = 'Sign Up For Free';
-  static const String userNameHintText = 'User name';
-  static const String emailHintText = 'Email';
-  static const String passHintText = 'Password';
-  static const String keepSignIn = 'Keep Me Signed In';
-  static const String createAccount = 'Create Account';
-  static const String hasAnAccount = 'already has an account?';
-  static const String userNameRequired = 'Please enter user name!';
+class ValidateMessages {
+  static const String userNameRequired = 'Please enter user name !';
+  static const String emailRequired = 'Please enter your email !';
+  static const String passwordRequired = 'Please enter your password !';
+
   static const String userNameValid =
-      'User name must be between 5 and 30 characters!';
-  static const String emailRequired = 'Please enter your email address!';
+      'User name must be between 5 and 30 characters !';
   static const String emailValid =
-      'Please enter a valid email address. \nExample: hello@gmail.com';
-  static const String passwordRequired = 'Please enter your password!';
+      'Please enter a valid email\nExample: hello@gmail.com';
   static const String passwordValid =
-      'Password must has at least 8 characters that \ninclude at least 1 lower case character,\n1 upper case charater, 1 number,\nand 1 special character in (!@#\$%^&*)';
+      'Password must has at least 8 characters that\ninclude at least 1 lower case character,\n1 upper case character, 1 number\nand 1 special character in (~!@#\$%^&*_+)';
 }
 
-class SignInProcessStrings {
-  static const String firstPageTitle = 'Fill in your bio to get \nstarted';
-  static const String secondPageTitle = 'Payment Method';
-  static const String thirdPageTitle = 'Update Your Photo \nProfile';
+class SignUpStrings {
+  static const String title = 'Sign Up For Free';
 
-  static const String pageSubTitle =
+  static const String userNameHint = 'User name';
+  static const String emailHint = 'Email';
+  static const String passwordHint = 'Password';
+
+  static const String keepSignIn = 'Keep Me Signed In';
+  static const String haveAnAccount = 'already have an account!';
+}
+
+class SignUpProcessStrings {
+  static const String firstPageTitle = 'Fill in your bio to get\nstarted';
+  static const String secondPageTitle = 'Payment Method';
+  static const String thirdPageTitle = 'Upload Your Photo Profile';
+  static const String fourPageTitle = 'Set Your Location';
+
+  static const String subtitle =
       'This data will be displayed in your account\nprofile for security';
 
-  static const String firstNameHintText = 'First name';
-  static const String lastNameHintText = 'First name';
-  static const String phoneHintText = 'First name';
+  static const String firstNameHint = 'First name';
+  static const String lastNameHint = 'Last name';
+  static const String phoneHint = 'Phone';
 
-  static const String galleryOption = 'From Gallery';
-  static const String cameraOption = 'Take Photo';
+  static const String fromGallery = 'From Galley';
+  static const String fromCamera = 'Take Photo';
+
+  static const String locationTitle = 'Your Location';
+
+  static const String congrats = 'Congrats!';
+
+  static const String successMessage = 'Your Profile Is Ready To Use';
 }

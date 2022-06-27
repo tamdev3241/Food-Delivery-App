@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../constants/app_colors.dart';
+
 class AppTheme {
   static ThemeData buildTheme = ThemeData(
+    primaryColor: AppColors.darkGreen,
     brightness: Brightness.light,
     backgroundColor: Colors.white,
     scaffoldBackgroundColor: Colors.white,
@@ -22,8 +25,8 @@ class AppTheme {
     ),
     textTheme: const TextTheme(
       headline5: TextStyle(
-        fontSize: 28,
-        fontWeight: FontWeight.w900,
+        fontSize: 26,
+        fontWeight: FontWeight.w700,
         color: Colors.black,
         fontFamily: 'Roboto-Bold',
       ),
@@ -46,10 +49,6 @@ class AppTheme {
         fontFamily: 'Roboto-Thin',
         height: 1.5,
       ),
-    ),
-    iconTheme: const IconThemeData(
-      color: Colors.black,
-      size: 24.0,
     ),
   );
 }

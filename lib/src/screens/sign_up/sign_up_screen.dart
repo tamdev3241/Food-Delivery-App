@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/app_assets.dart';
-import '../../../constants/app_strings.dart';
-import '../../../widgets/logo_app.dart';
+import '../../constants/app_assets.dart';
+import '../../constants/app_strings.dart';
 import 'widgets/sign_up_form.dart';
 
-class SignUpScreen extends StatefulWidget {
+class SignUpScreen extends StatelessWidget {
   const SignUpScreen({Key? key}) : super(key: key);
 
-  @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
-}
-
-class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,16 +24,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
           child: SingleChildScrollView(
             child: Column(
-              mainAxisSize: MainAxisSize.max,
               children: [
-                const LogoApp(),
-                const SizedBox(height: 10.0),
-                Text(
-                  AuthenticaStrings.signUpTitle,
-                  style: Theme.of(context).textTheme.headline6,
+                const SizedBox(height: 40.0),
+                Image.asset(AppAssets.logo),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40.0, bottom: 20.0),
+                  child: Text(
+                    SignUpStrings.title,
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
                 ),
-                const SizedBox(height: 25.0),
-                const SignUpForm()
+                const SignUpForm(),
               ],
             ),
           ),

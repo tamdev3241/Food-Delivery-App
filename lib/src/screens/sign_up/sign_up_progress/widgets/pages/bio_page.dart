@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../constants/app_strings.dart';
-import '../../../../widgets/common_text_field.dart';
+import '../../../../../constants/app_strings.dart';
+import '../../../../../widgets/common_text_field.dart';
 
 class UserBioPage extends StatelessWidget {
   const UserBioPage({Key? key}) : super(key: key);
@@ -12,30 +12,33 @@ class UserBioPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.only(left: 20.0, bottom: 10.0),
           child: Text(
-            SignInProcessStrings.firstPageTitle,
+            SignUpProcessStrings.firstPageTitle,
             style: Theme.of(context).textTheme.headline5,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(left: 20.0, bottom: 10.0),
           child: Text(
-            SignInProcessStrings.pageSubTitle,
+            SignUpProcessStrings.subtitle,
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
         const CommonTextField(
-          hindText: SignInProcessStrings.firstNameHintText,
-          padding: EdgeInsets.all(10.0),
+          offset: Offset(0, 0),
+          blurRadius: 30.0,
+          hintText: SignUpProcessStrings.firstNameHint,
         ),
         const CommonTextField(
-          hindText: SignInProcessStrings.lastNameHintText,
-          padding: EdgeInsets.all(10.0),
+          offset: Offset(0, 0),
+          blurRadius: 30.0,
+          hintText: SignUpProcessStrings.lastNameHint,
         ),
         const CommonTextField(
-          hindText: SignInProcessStrings.phoneHintText,
-          padding: EdgeInsets.all(10.0),
+          offset: Offset(0, 0),
+          blurRadius: 30.0,
+          hintText: SignUpProcessStrings.phoneHint,
         ),
       ],
     );
