@@ -20,4 +20,7 @@ class AppAssets {
   static const String pin = 'assets/images/pin_logo.png';
 
   static const String success = 'assets/images/success_icon.png';
+
+  static const String fakebookIcon = 'assets/images/facebook_icon.png';
+  static const String googleIcon = 'assets/images/google_icon.png';
 }

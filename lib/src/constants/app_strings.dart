@@ -1,6 +1,7 @@
 class ButtonTitles {
   static const String next = 'Next';
   static const String signUp = 'Create Account';
+  static const String login = 'Login';
   static const String setLocation = 'Set Location';
   static const String tryOrder = 'Try Order';
 }
@@ -26,6 +27,9 @@ class ValidateMessages {
       'Please enter a valid email\nExample: hello@gmail.com';
   static const String passwordValid =
       'Password must has at least 8 characters that\ninclude at least 1 lower case character,\n1 upper case character, 1 number\nand 1 special character in (~!@#\$%^&*_+)';
+
+  static const String emailInCorrect = 'Email is not formated !';
+  static const String passwordInCorrect = 'Password was wrong !';
 }
 
 class SignUpStrings {
@@ -60,4 +64,14 @@ class SignUpProcessStrings {
   static const String congrats = 'Congrats!';
 
   static const String successMessage = 'Your Profile Is Ready To Use';
+}
+
+class LoginStrings {
+  static const String title = 'Login To Your Account';
+
+  static const String loginWith = 'Or Continue With';
+  static const String facebookTitile = 'Facebook';
+  static const String googleTitle = 'Google';
+
+  static const String forgotPassword = 'Forgot Your Password?';
 }

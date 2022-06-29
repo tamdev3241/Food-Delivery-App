@@ -18,6 +18,15 @@ class CustomeStyle {
     height: 1.5,
   );
 
+  static const TextStyle thinUnderLineStyle = TextStyle(
+    fontFamily: 'Roboto-Thin',
+    height: 1.5,
+    fontSize: 14,
+    decoration: TextDecoration.underline,
+    fontWeight: FontWeight.w500,
+    color: AppColors.darkGreen,
+  );
+
   static const TextStyle successBoldTextStyle = TextStyle(
     fontSize: 30.0,
     fontWeight: FontWeight.w800,

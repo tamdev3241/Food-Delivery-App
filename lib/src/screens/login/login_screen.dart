@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/src/screens/login/widgets/login_form.dart';
+import 'package:food_delivery_app/src/widgets/logo.dart';
 
 import '../../constants/app_assets.dart';
 import '../../constants/app_strings.dart';
-import '../../widgets/logo.dart';
-import 'widgets/sign_up_form.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +31,11 @@ class SignUpScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 40.0, bottom: 20.0),
                   child: Text(
-                    SignUpStrings.title,
+                    LoginStrings.title,
                     style: Theme.of(context).textTheme.headline6,
                   ),
                 ),
-                const SignUpForm(),
+                const LoginForm(),
               ],
             ),
           ),

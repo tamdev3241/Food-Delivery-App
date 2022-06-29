@@ -116,16 +116,10 @@ class _SignUpFormState extends State<SignUpForm> {
             onPressed: () => onSignUp(),
           ),
           TextButton(
-            onPressed: () {
-              /// move to login screen
-            },
-            child: Text(
+            onPressed: () => Navigator.pushNamed(context, RouteNames.login),
+            child: const Text(
               SignUpStrings.haveAnAccount,
-              style: CustomeStyle.thinTextStyle.copyWith(
-                decoration: TextDecoration.underline,
-                fontWeight: FontWeight.w500,
-                color: AppColors.darkGreen,
-              ),
+              style: CustomeStyle.thinUnderLineStyle,
             ),
           ),
         ],
