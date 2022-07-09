@@ -18,6 +18,7 @@ class SignUpProcessScreen extends StatefulWidget {
 }
 
 class _SignUpProcessScreenState extends State<SignUpProcessScreen> {
+  final bool isSignUp = true;
   final PageController pageController = PageController();
   final List<Widget> pages = const [
     UserBioPage(),
@@ -37,7 +38,7 @@ class _SignUpProcessScreenState extends State<SignUpProcessScreen> {
         Navigator.pushNamed(
           context,
           RouteNames.success,
-          arguments: SignUpProcessStrings.successMessage,
+          arguments: isSignUp,
         );
       }
     }
@@ -56,45 +57,47 @@ class _SignUpProcessScreenState extends State<SignUpProcessScreen> {
           ),
         ),
         child: SafeArea(
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: MaterialButton(
-                    onPressed: () => Navigator.pop(context),
-                    color: AppColors.orange,
-                    elevation: 0.0,
-                    minWidth: 0.0,
-                    padding: const EdgeInsets.all(15.0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    child: const Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      color: AppColors.darkOrange,
-                      size: 20.0,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: MaterialButton(
+                      onPressed: () => Navigator.pop(context),
+                      color: AppColors.orange,
+                      elevation: 0.0,
+                      minWidth: 0.0,
+                      padding: const EdgeInsets.all(15.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: AppColors.darkOrange,
+                        size: 20.0,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height - 200,
-                child: PageView(
-                  controller: pageController,
-                  children: pages,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height - 200,
+                  child: PageView(
+                    controller: pageController,
+                    children: pages,
+                  ),
                 ),
-              ),
-              CommonButton(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 20.0,
-                  horizontal: 60.0,
+                CommonButton(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 20.0,
+                    horizontal: 60.0,
+                  ),
+                  title: ButtonTitles.next,
+                  onPressed: onNextPage,
                 ),
-                title: ButtonTitles.next,
-                onPressed: onNextPage,
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/src/screens/login/widgets/login_with_social_network.dart';
 
 import '../../../constants/app_strings.dart';
+import '../../../routes/route_names.dart';
 import '../../../utils/validator.dart';
 import '../../../widgets/common_button.dart';
 import '../../../widgets/common_text_field.dart';
+import 'login_with_social_network.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -41,7 +42,7 @@ class _LoginFormState extends State<LoginForm> {
   void onLogin() {
     FocusScope.of(context).unfocus();
     if (formKey.currentState!.validate()) {
-      ///
+      Navigator.pushNamed(context, RouteNames.home);
     }
   }
 

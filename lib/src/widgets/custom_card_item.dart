@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class OptionItem extends StatelessWidget {
+class CustomCardItem extends StatelessWidget {
   final Widget? child;
   final double? blurRadius;
   final Offset? offset;
@@ -8,7 +8,7 @@ class OptionItem extends StatelessWidget {
   final EdgeInsetsGeometry? margin;
   final Color? boderColor;
   final Function()? onTapped;
-  const OptionItem({
+  const CustomCardItem({
     Key? key,
     this.child,
     this.offset,

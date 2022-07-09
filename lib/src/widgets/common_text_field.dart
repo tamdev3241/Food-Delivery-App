@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constants/app_strings.dart';
 import '../styles/custome_styles.dart';
 
 class CommonTextField extends StatefulWidget {
@@ -58,7 +59,7 @@ class _CommonTextFieldState extends State<CommonTextField> {
         controller: widget.controller,
         cursorHeight: 22.0,
         obscureText: isShow,
-        obscuringCharacter: '*',
+        obscuringCharacter: ValidateMessages.hideCharacter,
         style: CustomeStyle.thinTextStyle,
         decoration: InputDecoration(
           hintText: widget.hintText,

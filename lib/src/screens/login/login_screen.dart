@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/src/screens/login/widgets/login_form.dart';
-import 'package:food_delivery_app/src/widgets/logo.dart';
 
 import '../../constants/app_assets.dart';
 import '../../constants/app_strings.dart';
+import '../../widgets/logo.dart';
+import 'widgets/login_form.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);

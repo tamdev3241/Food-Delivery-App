@@ -7,8 +7,8 @@ import '../styles/custome_styles.dart';
 import '../widgets/common_button.dart';
 
 class SuccessScreen extends StatelessWidget {
-  final String? message;
-  const SuccessScreen({Key? key, this.message}) : super(key: key);
+  final bool isSignUp;
+  const SuccessScreen({Key? key, required this.isSignUp}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,9 @@ class SuccessScreen extends StatelessWidget {
               ),
               const SizedBox(height: 10.0),
               Text(
-                SignUpProcessStrings.successMessage,
+                isSignUp
+                    ? SignUpProcessStrings.successMessage
+                    : ForgetPasswordStrings.passwordResetSuccessul,
                 style: Theme.of(context).textTheme.headline5,
               ),
               const Spacer(),
@@ -43,8 +45,12 @@ class SuccessScreen extends StatelessWidget {
                   vertical: 20.0,
                   horizontal: 40.0,
                 ),
-                title: ButtonTitles.tryOrder,
-                onPressed: () => Navigator.pushNamed(context, RouteNames.home),
+                title: isSignUp ? ButtonTitles.tryOrder : ButtonTitles.back,
+                onPressed: () {
+                  isSignUp
+                      ? Navigator.pushNamed(context, RouteNames.home)
+                      : Navigator.pop(context);
+                },
               ),
               const SizedBox(height: 50.0),
             ],

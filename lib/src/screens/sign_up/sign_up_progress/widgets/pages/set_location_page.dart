@@ -4,7 +4,7 @@ import '../../../../../constants/app_assets.dart';
 import '../../../../../constants/app_strings.dart';
 import '../../../../../styles/custome_styles.dart';
 import '../../../../../widgets/common_button.dart';
-import '../option_item.dart';
+import '../../../../../widgets/custom_card_item.dart';
 
 class SetLocationPage extends StatelessWidget {
   const SetLocationPage({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class SetLocationPage extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        OptionItem(
+        CustomCardItem(
           offset: const Offset(5, 15),
           padding: const EdgeInsets.all(10.0),
           child: Column(

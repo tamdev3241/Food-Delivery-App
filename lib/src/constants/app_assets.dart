@@ -23,4 +23,7 @@ class AppAssets {
 
   static const String fakebookIcon = 'assets/images/facebook_icon.png';
   static const String googleIcon = 'assets/images/google_icon.png';
+
+  static const String smsIcon = 'assets/images/sms.png';
+  static const String mailIcon = 'assets/images/email.png';
 }

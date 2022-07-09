@@ -24,6 +24,12 @@ class AppTheme {
       centerTitle: true,
     ),
     textTheme: const TextTheme(
+      headline4: TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+        fontFamily: 'Roboto-Bold',
+      ),
       headline5: TextStyle(
         fontSize: 26,
         fontWeight: FontWeight.w700,

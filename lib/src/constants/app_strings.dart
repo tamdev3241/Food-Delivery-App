@@ -1,5 +1,6 @@
 class ButtonTitles {
   static const String next = 'Next';
+  static const String back = 'Back';
   static const String signUp = 'Create Account';
   static const String login = 'Login';
   static const String setLocation = 'Set Location';
@@ -20,6 +21,8 @@ class ValidateMessages {
   static const String userNameRequired = 'Please enter user name !';
   static const String emailRequired = 'Please enter your email !';
   static const String passwordRequired = 'Please enter your password !';
+  static const String confirmPasswordRequired =
+      'Please enter your password again!';
 
   static const String userNameValid =
       'User name must be between 5 and 30 characters !';
@@ -30,6 +33,10 @@ class ValidateMessages {
 
   static const String emailInCorrect = 'Email is not formated !';
   static const String passwordInCorrect = 'Password was wrong !';
+
+  static const String confirmAndPasswordNotMatch =
+      'Confirm password and password must be \nmatch!';
+  static const String hideCharacter = '●';
 }
 
 class SignUpStrings {
@@ -74,4 +81,25 @@ class LoginStrings {
   static const String googleTitle = 'Google';
 
   static const String forgotPassword = 'Forgot Your Password?';
+}
+
+class ForgetPasswordStrings {
+  static const String firstPageTitle = 'Forgot password?';
+
+  static const String secondPageTitle = 'Enter 4-digit\nVerification code';
+  static const String secondPageSubTitle =
+      'Code send to +84 ***** 4325 . This code will\nexpired in';
+
+  static const String thirdPageTitle = 'Reset your password\nhere';
+  static const String firstAndThirdPageSubTitle =
+      'Select which contact details should we\nuse to reset your password';
+
+  static const String viaSMS = 'Via sms:';
+  static const String viaGmail = 'Via email:';
+  static const String gmailFormat = '@gmail.com';
+
+  static const String newPasswordHint = 'New Password';
+  static const String confirmPasswordHint = 'Confirm Password';
+
+  static const String passwordResetSuccessul = 'Password reset succesful';
 }

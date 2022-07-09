@@ -7,6 +7,7 @@ class Validator {
   );
 
   static bool isNullOrEmptyString(String? str) => str == null || str.isEmpty;
+  static bool isNotNullOrEmptyString(String? str) => !isNullOrEmptyString(str);
 
   static bool isValidUserName(String username) =>
       username.length >= 5 && username.length <= 30;
@@ -15,4 +16,8 @@ class Validator {
       _passwordRegExp.hasMatch(password);
 
   static bool isValidEmaill(String email) => _emailRegExp.hasMatch(email);
+
+  static bool isPasswordAndConfirmNotMatch(
+          String password, String confirmPassword) =>
+      password.compareTo(confirmPassword) != 0;
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../constants/app_assets.dart';
 import '../../../../../constants/app_strings.dart';
-import '../option_item.dart';
+import '../../../../../widgets/custom_card_item.dart';
 
 class UploadPhotoPage extends StatefulWidget {
   const UploadPhotoPage({Key? key}) : super(key: key);
@@ -61,7 +61,7 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
               )
             : Column(
                 children: [
-                  OptionItem(
+                  CustomCardItem(
                     offset: const Offset(0, 0),
                     onTapped: () => onChange(),
                     child: Column(
@@ -76,7 +76,7 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
                     ),
                   ),
                   const SizedBox(height: 20.0),
-                  OptionItem(
+                  CustomCardItem(
                     offset: const Offset(0, 0),
                     onTapped: () => onChange(),
                     child: Column(

@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:food_delivery_app/src/screens/login/login_screen.dart';
 
+import '../screens/forgot_password/forgot_password_screen.dart';
 import '../screens/home/home_screen.dart';
+import '../screens/login/login_screen.dart';
 import '../screens/not_found_screen.dart';
 import '../screens/on_boarding_screen/on_boarding_screen.dart';
 import '../screens/sign_up/sign_up_progress/sign_up_process.dart';
@@ -23,9 +24,11 @@ class RouteController {
         case RouteNames.signUpProcess:
           return const SignUpProcessScreen();
         case RouteNames.success:
-          return SuccessScreen(message: (settings.arguments as String));
+          return SuccessScreen(isSignUp: settings.arguments as bool);
         case RouteNames.login:
           return const LoginScreen();
+        case RouteNames.forgotPassword:
+          return const ForgotPasswordScreen();
         case RouteNames.home:
           return const HomeScreen();
         default:
