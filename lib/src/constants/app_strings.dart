@@ -5,6 +5,8 @@ class ButtonTitles {
   static const String login = 'Login';
   static const String setLocation = 'Set Location';
   static const String tryOrder = 'Try Order';
+  static const String buyNow = 'Buy now';
+  static const String viewMore = 'View more';
 }
 
 class OnBoardingStrings {
@@ -102,4 +104,19 @@ class ForgetPasswordStrings {
   static const String confirmPasswordHint = 'Confirm Password';
 
   static const String passwordResetSuccessul = 'Password reset succesful';
+}
+
+class NavigationString {
+  static const String homeTitle = 'Home';
+  static const String profileTitle = 'Profile';
+  static const String cartTitle = 'Cart';
+  static const String chatTitle = 'Chat';
+}
+
+class HomeString {
+  static const String title = 'Find Your\nFavorite Food';
+  static const String hintSearch = 'What do you want to order?';
+  static const String bannerLabel = 'Special Deal For\nOctober';
+  static const String nearestRestaurant = 'Nearest Restaurant';
+  static const String popularMenu = 'Popular Menu';
 }

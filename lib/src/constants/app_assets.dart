@@ -26,4 +26,25 @@ class AppAssets {
 
   static const String smsIcon = 'assets/images/sms.png';
   static const String mailIcon = 'assets/images/email.png';
+
+  static const String homeIcon = 'assets/images/home_bottom_icon.svg';
+  static const String cartIcon = 'assets/images/cart_bottom_icon.svg';
+  static const String chatIcon = 'assets/images/chat_bottom_icon.svg';
+  static const String profileIcon = 'assets/images/profile_bottom_icon.svg';
+
+  static const String notificationIcon = 'assets/images/notification_icon.png';
+  static const String searchIcon = 'assets/images/search_icon.png';
+  static const String filterIcon = 'assets/images/filter.png';
+  static const String homeBanner = 'assets/images/ad_banner.png';
+  static const List<String> nearestList = [
+    'assets/images/restaurant_1.png',
+    'assets/images/restaurant_2.png',
+    'assets/images/restaurant_3.png',
+    'assets/images/restaurant_4.png'
+  ];
+  static const List<String> popularMenu = [
+    'assets/images/menu_1.png',
+    'assets/images/menu_2.png',
+    'assets/images/menu_3.png'
+  ];
 }

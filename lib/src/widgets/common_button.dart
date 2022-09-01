@@ -8,12 +8,14 @@ class CommonButton extends StatelessWidget {
   final TextStyle? titleStyle;
   final EdgeInsetsGeometry? padding;
   final Color? color;
+  final double? boderRadius;
   final Function()? onPressed;
   const CommonButton({
     Key? key,
     required this.title,
-    this.titleStyle,
     required this.onPressed,
+    this.titleStyle,
+    this.boderRadius,
     this.padding,
     this.color,
   }) : super(key: key);
@@ -29,7 +31,7 @@ class CommonButton extends StatelessWidget {
               vertical: 15.0,
             ),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15.0),
+          borderRadius: BorderRadius.circular(boderRadius ?? 15.0),
           color: color,
           gradient: color != null ? null : AppColors.greenGradianColor,
         ),

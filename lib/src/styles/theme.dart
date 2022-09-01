@@ -24,6 +24,12 @@ class AppTheme {
       centerTitle: true,
     ),
     textTheme: const TextTheme(
+      headline3: TextStyle(
+        fontSize: 33,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+        fontFamily: 'Roboto-Bold',
+      ),
       headline4: TextStyle(
         fontSize: 30,
         fontWeight: FontWeight.w700,
@@ -48,12 +54,24 @@ class AppTheme {
         color: Colors.black,
         fontFamily: 'Roboto-Bold',
       ),
+      bodyText2: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+        fontFamily: 'Roboto-Bold',
+      ),
       subtitle2: TextStyle(
         fontSize: 14,
         fontWeight: FontWeight.w400,
         color: Colors.black,
         fontFamily: 'Roboto-Thin',
         height: 1.5,
+      ),
+      subtitle1: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        color: Colors.black,
+        fontFamily: 'Roboto-Regular',
       ),
     ),
   );
