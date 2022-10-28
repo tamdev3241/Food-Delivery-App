@@ -120,3 +120,9 @@ class HomeString {
   static const String nearestRestaurant = 'Nearest Restaurant';
   static const String popularMenu = 'Popular Menu';
 }
+
+class FilterString {
+  static const String type = 'Type';
+  static const String location = 'Location';
+  static const String food = 'Food';
+}

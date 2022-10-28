@@ -4,17 +4,29 @@ import '../../constants/app_assets.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_strings.dart';
 import '../../styles/custome_styles.dart';
+import '../filters/filters_search.dart';
 import 'ad_banner.dart';
 import 'nearest_restaurant_list.dart';
 import 'popular_menu.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool isFilter = false;
+
+  void setFillter() {
+    setState(() => isFilter = !isFilter);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      // backgroundColor: Colors.transparent,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -97,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: setFillter,
                       child: Container(
                         margin: const EdgeInsets.only(left: 10.0),
                         padding: const EdgeInsets.symmetric(
@@ -114,10 +126,14 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const AdBanner(),
-              const NearestRestaurantList(),
-              const PopularMenu(),
-              const SizedBox(height: 60.0)
+              if (isFilter)
+                const FiltterSearch()
+              else ...[
+                const AdBanner(),
+                const NearestRestaurantList(),
+                const PopularMenu(),
+                const SizedBox(height: 60.0)
+              ],
             ],
           ),
         ),
